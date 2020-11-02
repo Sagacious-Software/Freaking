@@ -34,7 +34,11 @@ meson install
 
 ### General
 
-- carve out the API !!!!!!
+- get things working with GOSH
+- get a basic demo working
+- fonts, at least bitmaps for now
+- rect and vector path fill and stroke
+- make transforms used
 
 ### Implementation
 
