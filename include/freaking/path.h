@@ -3,7 +3,7 @@
 
 #include <stdlib.h>
 
-#include "vector.h"
+#include <kit/vector.h>
 
 typedef struct path_t {
 

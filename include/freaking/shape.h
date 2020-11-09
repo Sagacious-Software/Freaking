@@ -1,9 +1,10 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 
-#include "vector.h"
+#include <kit/vector.h>
+#include <kit/buffer.h>
+#include <kit/region.h>
 #include "path.h"
-#include "buffer.h"
 #include "pen.h"
 
 typedef enum shape_type_t {
@@ -48,8 +49,9 @@ path_t *create_shape_path (shape_t shape);
 void stroke_shape (shape_t shape, buffer_t *buffer, pen_t pen);
 void fill_shape   (shape_t shape, buffer_t *buffer, pen_t pen);
 
-shape_rectangle_t make_shape_rectangle (vec2_t a, vec2_t b);
-shape_vector_t    make_shape_vector    (path_t *path);
+shape_rectangle_t make_shape_rectangle             (vec2_t a, vec2_t b);
+shape_rectangle_t make_shape_rectangle_with_region (region_t region);
+shape_vector_t    make_shape_vector                (path_t *path);
 
 path_t *create_shape_rectangle_path (shape_rectangle_t shape);
 path_t *create_shape_vector_path    (shape_vector_t shape);
